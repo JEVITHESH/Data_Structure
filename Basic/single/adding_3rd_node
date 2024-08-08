@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node *link;
+};
+int main()
+{
+  //first node  
+  struct node *head=malloc(sizeof(struct node));
+    head->data=95;
+    head->link=NULL;
+    //second node
+    struct node *current=malloc(sizeof(struct node));
+    current->data=88;
+    head->link=NULL;
+    head->link=current;
+    //3rd node
+    current==malloc(sizeof(struct node));
+    current->data=3;
+    head->link->link=NULL;
+
+    return 0;
+}
