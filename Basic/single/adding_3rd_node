@@ -1,24 +1,28 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 struct node{
     int data;
     struct node *link;
 };
 int main()
 {
-  //first node  
-  struct node *head=malloc(sizeof(struct node));
-    head->data=95;
+    struct node *head=malloc(sizeof(struct node));
+    head->data=3;
     head->link=NULL;
-    //second node
-    struct node *current=malloc(sizeof(struct node));
-    current->data=88;
-    head->link=NULL;
-    head->link=current;
-    //3rd node
-    current==malloc(sizeof(struct node));
-    current->data=3;
-    head->link->link=NULL;
-
-    return 0;
+    struct node *second=malloc(sizeof(struct node));
+    second->data=5;
+    second->link=NULL;
+    head->link=second;
+    
+    second=malloc(sizeof(struct node));
+    second->data=6;
+    second->link=NULL;
+    head->link->link=second;
+    
+    struct node *ptr=head;
+    while(ptr!=NULL)
+    {
+        printf("%d ",ptr->data);
+        ptr=ptr->link;
+    }
 }
